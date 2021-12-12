@@ -5,21 +5,19 @@
       .header__left
         Logo(v-if="showLogo")
 
-      <div class="header__right">
-        <ToggleTheme />
-      </div>
-    </header>
+      .header__right
+        ToggleTheme
 
-    <main class="main">
-      <slot/>
-    </main>
+    main.main
+      slot
 
-    <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
-    </footer>
-
-  </div>
+    footer.footer
+      span.footer__copyright
+        | Copyright © {{ new Date().getFullYear() }}.
+      span.footer__links
+        | Powered by
+        a(href="//gridsome.org")
+          | Gridsome
 </template>
 
 <script>
